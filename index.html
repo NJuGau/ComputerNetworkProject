@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binusmaya</title>
+    <style>
+       * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .header{
+            border-bottom: 0.1rem solid rgb(194, 194, 194);
+            margin-top: 0.5rem;
+            width: 100%;
+            position: sticky;
+            
+        }
+
+        .header > .header_container{
+            display: flex;
+            align-items: center;
+            margin-left: 1rem;
+            margin-bottom: 0.5rem;
+            justify-content: space-between;
+            width: 27rem;
+            
+        }
+
+        .header > .header_container > .menu_9dots{
+            width: 2rem;
+        }
+        
+       .header > .header_container > .header_logo{
+            display: flex;
+            align-items: center;
+       }
+
+       .header > .header_container > .header_logo > h1{
+            font-weight: 1000;
+            font-size: 1.5rem;
+       }
+
+
+       .header > .header_container > .header_logo > .header_logo_maya{
+            color: rgb(255, 223, 18);
+            font-weight: 500;
+       }
+
+       .header > .header_container > .header_text{
+          font-weight: 500; 
+          font-size: 1rem; 
+       }
+
+       /* navigator */
+
+       .main{
+        height: 100vh;
+        display: flex;
+       }
+
+       .main > .navigator{
+        width: 25vw;
+        height: 100%;
+        background-color: rgb(0,151,218);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation{
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        background-color: rgb(1,85,129);
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        width: 15vw;
+        border-radius: 1rem;
+        
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top > .account_icon_container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top > .account_icon_container img{
+        width: 1.25rem;
+        height: 1.25rem;
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top > .account_icon_container .role{
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 50;
+        padding-left: 0.25rem;
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top .change_button{
+        background-color: rgb(242,144,19);
+        border-radius: 0.5rem;
+        width: 4rem;
+        height: 1.25rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_top .change_button p{
+        font-weight: 500;
+        color: white;
+        font-size: 0.7rem;
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_bottom{
+        margin-top: 2rem;
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_bottom > .student{
+        color: white;
+        font: 1rem sans-serif;
+        font-size: 0.9rem;
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_bottom > .undergraduate{
+        color: white;
+        font-weight: 100;
+        font: 0.8rem sans-serif;
+        padding-top: 0.1rem;
+        
+       }
+
+       .main > .navigator > .navigator_accountInformation > .navigator_accountInformation_bottom > .binus{
+        color: white;
+        font-weight: 400;
+        font-size: 0.7rem;
+        padding-top: 0.2rem;
+       }
+
+       .main > .navigator > .navigator_submenu{
+        width: 100%;
+       }
+
+       .main > .navigator > .navigator_submenu > .container{
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        padding-left: 3rem;
+        
+       }
+
+       .main > .navigator > .navigator_submenu > .container:last-child{
+        padding-bottom: 1rem;
+       }
+
+       .main > .navigator > .navigator_submenu > .active{
+        background-color: rgb(1,85,129);
+        border-radius: 1rem 0rem 0rem 1rem;
+       }
+
+       .main > .navigator > .navigator_submenu > .container > p{
+        color: white;
+        font: 1rem sans-serif;
+        font-size: 0.9rem;
+        
+       }
+
+       /* Main */
+       .main > .content{
+        width: 100vw;
+        background-color: rgb(245,245,245);
+       }
+
+       .main > .content > .top-content{
+        margin-left: 1rem;
+        margin-top: 1rem;
+        
+       }
+
+       .main > .content > .top-content > .title{
+        font: 1rem sans-serif;
+        font-size: 1.5rem;
+       }
+
+       .main > .content > .top-content > .runningPeriod{
+        margin-top: 1rem;
+       }
+
+       .main > .content > .top-content > .runningPeriod > p{
+        font: 1rem sans-serif;
+        font-size: 0.6rem;
+       }
+
+       .main > .content > .top-content > .runningPeriod > .runningPeriod_data{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5vh;
+        padding-top: 0.5vh;
+        padding-left: 1rem;
+        width: 35vw;
+        height: 2vw;
+        border: 0.1rem solid rgb(194, 194, 194);
+        border-radius: 0.5rem;
+        background-color: white;
+        align-items: center;
+       }
+
+       .main > .content > .top-content > .runningPeriod > .runningPeriod_data p{
+        font: 1rem sans-serif;
+        font-size: 0.9rem;
+        
+       }
+
+       .main > .content > .top-content > .runningPeriod > .runningPeriod_data > .right{
+        display: flex;
+        width: 5vw;
+        justify-content: space-evenly;
+       }
+
+       .main > .content > .navbar-class-container{
+        width: 100%;
+        border-top: 0.1rem solid rgb(194, 194, 194);
+        border-bottom: 0.1rem solid rgb(194, 194, 194);
+        margin-top: 2vw;
+       }
+
+       .main > .content > .navbar-class-container > .navbar-class{
+        display: flex;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        margin-left: 2vw;
+       }
+
+
+       .main > .content > .navbar-class-container > .navbar-class > .class-type{
+        padding-right: 1vw;
+        font: arial;
+        font-weight: lighter;
+        font-size: 1.5rem;
+       }
+
+       .main > .content > .navbar-class-container > .navbar-class > .active{
+        color: orange;
+       }
+
+       .main > .content > .class-list-container{
+        display: flex;
+        margin-left: 3vw;
+        margin-top: 2vw;
+        flex-basis: calc((1/3)*100%);
+       }
+
+       .main > .content > .class-list-container > .class-list{
+        width: 20vw;
+        height: 20vw;
+        margin-right: 3vw;
+        border: 0.1rem solid rgb(194, 194, 194);
+        border-radius: 0.5rem;
+        background-color: white;
+        padding-left: 1rem;
+        padding-top: 1rem;
+
+       }
+
+       .main > .content > .class-list-container > .class-list > .title{
+        font: sans-serif;
+        font-weight: 100;
+        font-size: 1.2rem;
+       }
+
+       .main > .content > .class-list-container > .class-list > .class-id{
+        font: sans-serif;
+        padding-top: 1rem;
+        font-weight: 100;
+        font-size: 0.8rem;
+       }
+
+       .main > .content > .class-list-container > .class-list > .class-name{
+        font: sans-serif;
+        font-weight: 100;
+        font-size: 0.8rem;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header_container">
+            <img class="menu_9dots" src="./menu_9dots.png" alt="">
+            <div class="header_logo">
+                <h1 class="header_logo_binus">BINUS</h1><h1 class="header_logo_maya">MAYA</h1>
+            </div>
+            <p>|</p>
+            <h1 class="header_text">Learning Management System</h1>
+        </div>
+    </div>
+
+    <section class="main">
+        <div class="navigator">
+            <div class="navigator_accountInformation">
+                <div class="navigator_accountInformation_top">
+                    <div class="account_icon_container">
+                        <img src="./account_icon.png" alt="">
+                        <p class="role">Role</p>
+                    </div>
+                    <div class="change_button">
+                        <p>CHANGE</p>
+                    </div>
+                </div>
+                <div class="navigator_accountInformation_bottom">
+                    <h3 class="student">Student</h3>
+                    <h4 class="undergraduate">Undergraduate</h4>
+                    <h4 class="binus">BINUS University</h4>
+                </div>
+            </div>
+            <div class="navigator_submenu">
+                <div class="container">
+                    <p>Dashboard</p>
+                </div>
+                <div class="container active">
+                    <p>Courses</p>
+                </div>
+                <div class="container">
+                    <p>Forum</p>
+                </div>
+                <div class="container">
+                    <p>Assessment</p>
+                </div>
+                <div class="container">
+                    <p>Schedule</p>
+                </div>
+                <div class="container">
+                    <p>Announcement</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="top-content">
+                <div class="title">My Courses</div>
+                <div class="runningPeriod">
+                    <p>Running Period</p>
+                    <div class="runningPeriod_data">
+                        <p>2022, Odd Semester</p>
+                        <div class="right">
+                            <p>|</p>
+                            <p>V</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="navbar-class-container">
+                <div class="navbar-class">
+                    <div class="class-type active">LAB</div>
+                    <div class="class-type">LEC</div>
+                    <div class="class-type">TUT</div>
+                </div>
+            </div>
+
+            <div class="class-list-container">
+                <div class="class-list">
+                    <p class="title">Computational Physics</p>
+                    <p class="class-id">SCIE6064001</p>
+                    <p class="class-name">BN01</p>
+                </div>
+
+                <div class="class-list">
+                    <p class="title">Computer Networks</p>
+                    <p class="class-id">CPEN6247001</p>
+                    <p class="class-name">B101</p>
+                </div>
+
+                <div class="class-list">
+                    <p class="title">Database Technology</p>
+                    <p class="class-id">COMP6799001</p>
+                    <p class="class-name">B101</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+</body>
+
+</html>
