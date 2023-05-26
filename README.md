@@ -1,2 +1,2 @@
 # ComputerNetworkProject
-A computer network analysis has been made to floor 4, 5, and 6 of Binus University Campus @ Alam Sutera.
+A group computer network project to fulfill Binus University’s computer network assurance of learning project. A computer network analysis has been made to floor 4, 5, and 6 of Binus University Campus @ Alam Sutera. A survey is first conducted, then a network topology and subnetting using VLSM method is created, then a routing using EIGRP is done, and some complimentary services are added, such as DHCP, DNS, HTTP, FTP, and SMTP.
